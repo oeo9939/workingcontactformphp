@@ -13,6 +13,12 @@
         if(filter_var($email, FILTER_VALIDATE_EMAIL)) { // if user entered email is valid
             $receiver = "mgttmich@gmail.com"; // email receiver adress
             $subject = "From: $name <$email>"; // subject of the email. From: Theodoros Michos <mgttmich@gmail.com>
+            // merging concating all user values inside body variable. \n is used for new line
+            $body = "Name: $name\nEmail: $email\nPhone: $phone\nWebsite: $website\n\nMessage: $message\n\nRegards, \n$name";
+            $sender = "From: $email"; // sender email
+            if(mail($receiver, $subject, $body, $sender)) { //mail() is inbuilt php function to send mail
+
+            }
         } else {
             echo "Enter a valid email adress!";
         }
