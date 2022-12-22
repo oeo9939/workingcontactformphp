@@ -13,6 +13,8 @@ form.onsubmit = (e) => {
             console.log(response);
         }
     }
+    let formData = new FormData(); // creating a new FormData obj. This obj is used to send form data
     xhr.send();
+    
 }
 
