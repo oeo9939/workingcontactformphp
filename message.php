@@ -17,7 +17,9 @@
             $body = "Name: $name\nEmail: $email\nPhone: $phone\nWebsite: $website\n\nMessage: $message\n\nRegards, \n$name";
             $sender = "From: $email"; // sender email
             if(mail($receiver, $subject, $body, $sender)) { //mail() is inbuilt php function to send mail
-
+                echo "Your message has been sent!";
+            } else {
+                echo "Sorry failed to send your message!";
             }
         } else {
             echo "Enter a valid email adress!";
